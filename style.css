@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: rgb(62, 67, 73);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+body>p {
+   position: fixed;
+   bottom: 2px;
+   right: 2px;
+   font-family: sans-serif;
+   font-size: 0.75rem;
+}
+
+.clock-frame {
+   --line-hour-color: rgb(36, 36, 36);
+   --line-minute-color: rgb(44, 44, 44);
+   --hour-hand-color: rgb(53, 53, 53);
+   --minute-hand-color: rgb(70, 84, 87);
+   --second-hand-color: rgb(128, 71, 71);
+
+   aspect-ratio: 1/1;
+   background-color: rgb(27, 27, 27);
+   border-radius: 50%;
+   width: clamp(200px, 90%, 600px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 0.5rem rgba(0, 0, 0, 0.711);
+
+}
+
+.clock {
+   background-image: radial-gradient(rgb(199, 199, 199) 0%, rgb(48, 47, 47) 120%);
+   aspect-ratio: 1/1;
+   width: 90%;
+   box-shadow: 0 0.5rem 4rem rgb(53, 53, 53) inset,
+      0 1rem 1.5rem rgb(12, 0, 0) inset,
+      0 4rem 1rem rgba(94, 66, 66, 0.527) inset,
+      0 0 0 0.5rem rgb(46, 46, 46);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+.center-dot {
+   aspect-ratio: 1/1;
+   height: 1rem;
+   background-image: radial-gradient(rgb(58, 58, 58) 10%, rgb(31, 31, 31) 90%);
+   border-radius: 50%;
+   position: absolute;
+   z-index: 4;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand,
+.line {
+   transform: translate(0, -50%);
+   position: absolute;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+   box-shadow: 0 0 5px rgba(114, 114, 114, 0.849);
+   border-radius: 1rem;
+}
+
+.hour-hand {
+   height: 27%;
+   width: 0.5rem;
+   background-color: var(--hour-hand-color);
+   z-index: 1;
+}
+
+.minute-hand {
+   height: 35%;
+   width: 0.35rem;
+   background-color: var(--minute-hand-color);
+   z-index: 2;
+}
+
+.second-hand {
+   width: 0.2rem;
+   height: 40%;
+   background-color: var(--second-hand-color);
+   z-index: 3;
+   transition: rotate 0.1s;
+}
+
+.line {
+   height: 48%;
+}
+
+.line.hour {
+   width: 0.25rem;
+}
+
+.line.hour.strong {
+   width: 0.5rem;
+}
+
+.line.hour .tip {
+   height: 2rem;
+   background-color: var(--line-hour-color);
+}
+
+.line.hour.strong .tip {
+   height: 3.4rem;
+}
+
+.line.minute {
+   height: 48%;
+   width: 0.1rem;
+}
+
+.line.minute .tip {
+   background-color: var(--line-minute-color);
+   height: 1rem;
+}
+
+@media (max-width: 500px) {
+   :root {
+      font-size: 9px;
+   }
+}
