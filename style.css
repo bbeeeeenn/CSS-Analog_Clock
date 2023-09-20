@@ -95,7 +95,8 @@ body>p {
 
 .second-hand {
    width: 0.2rem;
-   height: 40%;
+   height: 45%;
+   transform: translateY(-39%);
    background-color: var(--second-hand-color);
    z-index: 3;
    transition: rotate 0.1s;
