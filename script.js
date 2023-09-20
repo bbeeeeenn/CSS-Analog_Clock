@@ -27,11 +27,12 @@ for (let i = 0; i < 60; i++) {
 	}
 }
 
-// Below is for clock's hand movement
+// Below is for clock's hand movement -------------------------------------------------
 const hourHand = document.getElementById("hour-hand");
 const minuteHand = document.getElementById("minute-hand");
 const secondHand = document.getElementById("second-hand");
 
+// I need to put this outside the function for second hand animation
 const todayForAnimation = new Date();
 let secondsForAnimation = todayForAnimation.getSeconds();
 
