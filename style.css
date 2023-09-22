@@ -114,12 +114,18 @@ body>p {
    width: 0.5rem;
 }
 
-.line.hour .tip {
+.line.hour::before,
+.line.minute::before {
+   content: '';
+   display: block;
+}
+
+.line.hour::before {
    height: 2rem;
    background-color: var(--line-hour-color);
 }
 
-.line.hour.strong .tip {
+.line.hour.strong::before {
    height: 3.4rem;
 }
 
@@ -128,7 +134,7 @@ body>p {
    width: 0.1rem;
 }
 
-.line.minute .tip {
+.line.minute::before {
    background-color: var(--line-minute-color);
    height: 1rem;
 }

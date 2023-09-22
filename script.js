@@ -4,10 +4,7 @@ const clock = document.querySelector(".clock");
 for (let i = 0; i < 12; i++) {
 	const hourLine = document.createElement("div");
 	hourLine.classList.add("line", "hour");
-	const tip = document.createElement("div");
-	tip.classList.add("tip");
 	clock.appendChild(hourLine);
-	hourLine.appendChild(tip);
 	if (i % 3 == 0) {
 		hourLine.classList.add("strong");
 	}
@@ -19,10 +16,7 @@ for (let i = 0; i < 60; i++) {
 	if (i % 5 != 0) {
 		const minuteLine = document.createElement("div");
 		minuteLine.classList.add("line", "minute");
-		const tip = document.createElement("div");
-		tip.classList.add("tip");
 		clock.appendChild(minuteLine);
-		minuteLine.appendChild(tip);
 		minuteLine.style.rotate = `${i / 60}turn`;
 	}
 }
