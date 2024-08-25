@@ -1,6 +1,8 @@
 # Analog-Clock
 Built for fun:D
 
-<a href="https://analog321.netlify.app" align="center">https://analog321.netlify.app</a>
+<p align="center">
+  <a href="https://analog321.netlify.app">https://analog321.netlify.app</a>
+</p>
 
 ![Clock](/Clock.png)
