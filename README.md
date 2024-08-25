@@ -4,5 +4,6 @@
   Built for fun<br>
   <a href="https://analog321.netlify.app">https://analog321.netlify.app</a>
 </p>
-
-![Clock](/Clock.png)
+<a>
+  <image alt="Clock" src="/Clock.png"></image>
+</a>
